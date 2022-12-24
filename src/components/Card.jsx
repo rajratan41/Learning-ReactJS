@@ -1,15 +1,15 @@
 import { useState } from "react"
 
 
-function Card({name = "Kamal", imgUrl,  text, link, btn}) {
+function Card({details}) {
 
   return (
     <div className="card" style= {{width: "18rem"}}>
-  <img src={imgUrl}className="card-img-top" alt="..." />
+  <img src= {details.picture?.large} className="card-img-top" alt="..." />
   <div className="card-body">
-    <h5 className="card-title">{name}</h5>
-    <p className="card-text">{text}</p>
-    <a href= {link} className="btn btn-primary">{btn}</a>
+    <h5 className="card-title">Name - {details.name?.first}</h5>
+    <p className="card-text">Mobile no. -{details.phone}</p>
+    <a href= "#" className="btn btn-primary">Click Me</a>
   </div>
 </div>
   )
